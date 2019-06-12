@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Home</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+    </head>
+
+    <body>
+
+        <form action="thankyou.html" method="get">
+            <div>
+                <label for="fn">First Name:</label>
+                <input id="fn" type="text" name="" placeholder="First Name" value="{{ sp_one }}" required>
+                <a href="{% url 'entry_form:speech_recog_one' %}" class="fa fa-microphone fa_custom fa-2x"></a>
+
+                <label for="mi">MI:</label>
+                <input id="mi" type="text" name="" placeholder="MI" value="{{ sp_two }}">
+                <a href="{% url 'entry_form:speech_recog_two' %}" class="fa fa-microphone fa_custom fa-2x"></a>
+
+                <label for="ln">Last Name:</label>
+                <input id="ln" type="text" name="" placeholder="Last Name" value="{{ sp_three }}" required>
+                <a href="{% url 'entry_form:speech_recog_three' %}" class="fa fa-microphone fa_custom fa-2x"></a>
+
+                <label for="mail">Email:</label>
+                <input id="mail" type="email" name="" placeholder="user@gmail.com">
+
+                <label>Facility:</label>
+                <select name="Facility">
+                    <option value="none">       </option>
+                </select>
+
+                <label for="un">AD Username:</label>
+                <input id="un" type="text" name="" placeholder="Username" required>
+
+                <label>Group Requests:</label>
+                <select name="Group Requests">
+                    <option value="none">       </option>
+                </select>
+
+                <label>Dashboard Access Requests:</label>
+                <select name="Dashboard Access Requests">
+                    <option value="none">       </option>
+                </select>
+
+                <input type="submit" name="" value="Submit">
+            </div>
+        </form>
+    </body>
+</html>
